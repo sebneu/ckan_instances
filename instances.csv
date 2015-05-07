@@ -1,10 +1,11 @@
 http://africaopendata.org/,http://africaopendata.org/api
+http://algeria.opendataforafrica.org/,http://opendata.aragon.es/catalogo/api/
 http://annuario.comune.fi.it,http://annuario.comune.fi.it/api
 http://bermuda.io/,http://bermuda.io/api
+http://beta.avoindata.fi/,https://beta.avoindata.fi/data/fi/api
 http://br.ckan.net,http://br.ckan.net/api
 http://catalogue.datalocale.fr,http://catalogue.datalocale.fr/api
 http://cities.opendatahub.gr,http://cities.opendatahub.gr/api
-http://ckan.data.linz.gv.at/,http://ckan.data.linz.gv.at/api
 http://ckan.gsi.go.jp/,http://ckan.gsi.go.jp/api
 http://cz.ckan.net,http://cz.ckan.net/api
 http://dados.gov.br,http://dados.gov.br/api
@@ -16,7 +17,8 @@ http://dartportal.leeds.ac.uk/,http://dartportal.leeds.ac.uk/api
 http://data.bris.ac.uk/data,http://data.bris.ac.uk/data/api
 http://data.buenosaires.gob.ar/,http://data.buenosaires.gob.ar/api
 http://data.cityofsantacruz.com/,http://data.cityofsantacruz.com/api
-http://data.denvergov.org/,not found
+http://data.codeforhouston.com/,
+http://data.denvergov.org/,
 http://data.edostate.gov.ng/,http://data.edostate.gov.ng/api
 http://data.glasgow.gov.uk/,http://data.glasgow.gov.uk/api
 http://data.gov.au/,http://data.gov.au/api
@@ -24,7 +26,7 @@ http://data.gov.ie/,http://data.gov.ie/api
 http://data.gov.ro/,http://data.gov.ro/api
 http://data.gov.sk,http://data.gov.sk/api
 http://data.gov.uk,http://data.gov.uk/api
-http://data.gov/,not found
+http://data.gov/,
 http://data.graz.gv.at/,http://ckan.data.graz.gv.at/api
 http://data.grcity.us,http://data.grcity.us/api
 http://data.gv.at,http://www.data.gv.at/katalog/api
@@ -32,9 +34,10 @@ http://data.hdx.rwlabs.org,http://data.hdx.rwlabs.org/api
 http://data.kk.dk/,http://data.kk.dk/api
 http://data.ktn.gv.at/,http://ckan.data.ktn.gv.at/api
 http://data.lexingtonky.gov/,http://data.lexingtonky.gov/api
+http://data.linz.gv.at/,http://ckan.data.linz.gv.at/api
 http://data.london.gov.uk/,http://data.london.gov.uk/api
-http://data.noe.gv.at/,not found
-http://data.norge.no/,not found
+http://data.noe.gv.at/,
+http://data.norge.no/,
 http://data.nsw.gov.au/,http://data.nsw.gov.au/data/api
 http://data.ohouston.org/,http://data.ohouston.org/api
 http://data.opencolorado.org,http://data.opencolorado.org/api
@@ -43,20 +46,21 @@ http://data.openva.com/,http://data.openva.com/api
 http://data.ottawa.ca/,http://data.ottawa.ca/api
 http://data.qld.gov.au/,https://data.qld.gov.au/api
 http://data.rio.rj.gov.br/,http://data.rio.rj.gov.br/api
-http://data.sa.gov.au/,http://data.sa.gov.au/api
 http://data.salzburgerland.com,http://data.salzburgerland.com/api
 http://data.surrey.ca/,http://data.surrey.ca/api
 http://data.tainan.gov.tw/,http://data.tainan.gov.tw/api
-http://data.tainan.gov.tw/,http://data.tainan.gov.tw/api
 http://data.ug/,http://catalog.data.ug/api
 http://data.wu.ac.at/,http://data.wu.ac.at/api
+http://datacatalogs.org/,
 http://dataforjapan.org,http://dataforjapan.org/api
 http://datagm.org.uk,http://datagm.org.uk/api
 http://datahub.io/,http://datahub.io/api
 http://datakilder.no,http://no.ckan.net/api/
 http://datameti.go.jp/data/,http://datameti.go.jp/data/api
 http://datamx.io/,http://datamx.io/api
-http://daten.berlin.de/,not found
+http://daten.berlin.de/,
+http://daten.hamburg.de/,
+http://daten.rlp.de/,http://www.daten.rlp.de/api
 http://dati.toscana.it/,http://dati.toscana.it/api
 http://dati.trentino.it/,http://dati.trentino.it/api
 http://datos.codeandomexico.org/,http://datos.codeandomexico.org/api
@@ -70,9 +74,8 @@ http://donnees.ville.sherbrooke.qc.ca,http://donnees.ville.sherbrooke.qc.ca/api
 http://drdsi.jrc.ec.europa.eu/,http://drdsi.jrc.ec.europa.eu/api
 http://geothermaldata.org/,http://geothermaldata.org/api
 http://gisdata.mn.gov,http://gisdata.mn.gov/api
-http://gong.io/,not found
+http://gong.io/,
 http://govdata.de,https://www.govdata.de/ckan/api/
-http://healthdata.gov/,http://hub.healthdata.gov/api
 http://hubofdata.ru/,http://hubofdata.ru/api
 http://iatiregistry.org,http://iatiregistry.org/api
 http://ie.ckan.net,http://ie.ckan.net/api
@@ -100,13 +103,16 @@ http://opingogn.is/,http://opingogn.is/api
 http://oppnadata.se,http://oppnadata.se/api
 http://portal.openbelgium.be,http://portal.openbelgium.be/api
 http://publicdata.eu,http://publicdata.eu/api
-http://rotterdamopendata.nl/,http://rotterdamopendata.nl/api
 http://rs.ckan.net/,http://rs.ckan.net/api
+http://thedatahub.org/,
 http://udct-data.aigid.jp,http://udct-data.aigid.jp/api
 http://www.amsterdamopendata.nl,http://data.amsterdamopendata.nl/api
 http://www.civicdata.io,http://www.civicdata.io/api
+http://www.data.gc.ca/,http://open.canada.ca/data/api/
+http://www.datagm.org.uk,
 http://www.daten.rlp.de/,http://www.daten.rlp.de/api
 http://www.datos.misiones.gov.ar/,http://www.datos.misiones.gov.ar/api
+http://www.healthdata.gov/,http://hub.healthdata.gov/api
 http://www.hri.fi/,http://www.hri.fi/api
 http://www.nosdonnees.fr/,http://www.nosdonnees.fr/api
 http://www.odaa.dk/,http://www.odaa.dk/api
@@ -114,6 +120,7 @@ http://www.offene-daten.me,http://www.offene-daten.me/api
 http://www.opendata-hro.de/,http://www.opendata-hro.de/api
 http://www.opendata.provincia.roma.it/,http://www.opendata.provincia.roma.it/api
 http://www.opendatahub.it/,http://www.opendatahub.it/api
+http://www.rotterdamopendata.nl/,http://rotterdamopendata.nl/api
 https://catalogodatos.gub.uy/,https://catalogodatos.gub.uy/api
 https://data.gov.hk/en/,https://data.gov.hk/en-data/api
 https://data.noaa.gov/dataset,https://data.noaa.gov/api
