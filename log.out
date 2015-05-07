@@ -1,0 +1,11 @@
+132 items in CSV list
+URL error: http://ckan.emap.fgv.br, (gaierror(11002, 'getaddrinfo failed'),)
+URL error: http://data.civicinfo.ca/, (error(10060, 'Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat'),)
+URL error: http://www.manchester.gov.uk/info/500215/open_data, 404
+URL error: http://datagov.ru/, (error(10060, 'Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat'),)
+URL error: http://thedatahub.kr/, (gaierror(11002, 'getaddrinfo failed'),)
+URL error: http://catalog.opendata.in.th/, (error(10060, 'Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat'),)
+URL error: http://data.klp.org.in/, (gaierror(11001, 'getaddrinfo failed'),)
+URL error: http://dados.novohamburgo.rs.gov.br, (error(10060, 'Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat'),)
+56 CKAN instances in dataportals.org
+132 items in joined list
