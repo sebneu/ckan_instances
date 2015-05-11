@@ -1,7 +1,9 @@
 import urllib2
+import httplib
 from urlparse import urlparse
 import json
 import csv
+import feedparser
 
 DATAPORTALS = 'http://dataportals.org/api/data.json'
 
@@ -45,6 +47,25 @@ def lookup_dataportals(dataportals):
                 except urllib2.URLError, e:
                     print('URL error: ' + url + ', ' + str(e.args))
     return ckan_portals
+
+
+def lookup_revision(api_url):
+    try:
+        url = api_url.split('/api')[-2] + '/revision/list?format=atom'
+        if check_url(url):
+            return url
+    except:
+        print('Feed error: ' + url)
+        pass
+    return None
+
+
+def check_url(url):
+    p = urlparse(url)
+    conn = httplib.HTTPConnection(p.netloc)
+    conn.request('HEAD', p.path)
+    resp = conn.getresponse()
+    return resp.status < 400
 
 
 def read_csv(file_obj):
@@ -94,6 +115,7 @@ if __name__ == '__main__':
         csvlist = read_csv(f)
     print(str(len(csvlist)) + ' items in CSV list')
 
+    # get dataportals URLs
     p = lookup_dataportals(DATAPORTALS)
     print(str(len(p)) + ' CKAN instances in dataportals.org')
 
@@ -107,3 +129,11 @@ if __name__ == '__main__':
     # rewrite file
     with open(filename+'.json', 'wb') as f:
         json.dump(joined, f)
+
+    # look for revision atom feed
+    revision_feed = [[csvlist[key]['api'], lookup_revision(csvlist[key]['api'])] for key in csvlist if csvlist[key]['api']]
+    with open('revision_feed.csv', 'wb') as h:
+        csvw = csv.writer(h)
+        csvw.writerow(['url', 'revision_feed'])
+        csvw.writerows(revision_feed)
+    
