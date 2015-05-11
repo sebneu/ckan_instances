@@ -136,4 +136,3 @@ if __name__ == '__main__':
         csvw = csv.writer(h)
         csvw.writerow(['url', 'revision_feed'])
         csvw.writerows(revision_feed)
-    
