@@ -1,11 +1,25 @@
-132 items in CSV list
+134 items in CSV list
 URL error: http://ckan.emap.fgv.br, (gaierror(-2, 'Name or service not known'),)
-URL error: http://data.civicinfo.ca/, (error(110, 'Connection timed out'),)
+URL error: http://it.ckan.net/, (error(111, 'Connection refused'),)
+URL error: http://data.civicinfo.ca/, (error(111, 'Connection refused'),)
 URL error: http://www.manchester.gov.uk/info/500215/open_data, 404
-URL error: http://datagov.ru/, (error(110, 'Connection timed out'),)
+URL error: http://datakilder.no, (error(111, 'Connection refused'),)
+URL error: http://datagov.ru/, (error(111, 'Connection refused'),)
 URL error: http://thedatahub.kr/, (gaierror(-2, 'Name or service not known'),)
-URL error: http://catalog.opendata.in.th/, (error(110, 'Connection timed out'),)
+URL error: http://cz.ckan.net/, (error(111, 'Connection refused'),)
+URL error: http://ie.ckan.net/, (error(111, 'Connection refused'),)
+URL error: http://catalog.opendata.in.th/, (error(111, 'Connection refused'),)
 URL error: http://data.klp.org.in/, (gaierror(-2, 'Name or service not known'),)
-URL error: http://dados.novohamburgo.rs.gov.br, (error(110, 'Connection timed out'),)
-56 CKAN instances in dataportals.org
-132 items in joined list
+URL error: http://br.ckan.net/, (error(111, 'Connection refused'),)
+URL error: http://dados.novohamburgo.rs.gov.br, (error(111, 'Connection refused'),)
+51 CKAN instances in dataportals.org
+134 items in joined list
+Feed error: http://datosabiertos.ec/revision/list?format=atom
+Feed error: https://dados.novohamburgo.rs.gov.br/revision/list?format=atom
+Feed error: https://opendata.bayern.de/revision/list?format=atom
+Feed error: http://ie.ckan.net/revision/list?format=atom
+Feed error: http://no.ckan.net/revision/list?format=atom
+Feed error: http://cz.ckan.net/revision/list?format=atom
+Feed error: http://it.ckan.net/revision/list?format=atom
+Feed error: https://data.noaa.gov/revision/list?format=atom
+Feed error: http://br.ckan.net/revision/list?format=atom

@@ -1,5 +1,5 @@
-api,revision_feed
-http://datosabiertos.ec/api,http://datosabiertos.ec/revision/list?format=atom
+url,revision_feed
+http://datosabiertos.ec/api,
 http://data.lexingtonky.gov/api,http://data.lexingtonky.gov/revision/list?format=atom
 http://data.gov.sk/api,http://data.gov.sk/revision/list?format=atom
 http://open.canada.ca/data/en/api,http://open.canada.ca/data/en/revision/list?format=atom
@@ -10,12 +10,14 @@ http://dados.recife.pe.gov.br/api,http://dados.recife.pe.gov.br/revision/list?fo
 https://dados.novohamburgo.rs.gov.br/api,
 http://data.openpolice.ru/api,http://data.openpolice.ru/revision/list?format=atom
 http://rs.ckan.net/api,http://rs.ckan.net/revision/list?format=atom
+https://opendata.bayern.de/api,
 http://africaopendata.org/api,http://africaopendata.org/revision/list?format=atom
 http://data.london.gov.uk/api,
+http://linkeddatacatalog.dws.informatik.uni-mannheim.de/api,http://linkeddatacatalog.dws.informatik.uni-mannheim.de/revision/list?format=atom
 http://data.ottawa.ca/api,http://data.ottawa.ca/revision/list?format=atom
 http://data.hdx.rwlabs.org/api,http://data.hdx.rwlabs.org/revision/list?format=atom
 http://www.daten.rlp.de/api,http://www.daten.rlp.de/revision/list?format=atom
-http://www.datos.misiones.gov.ar/api,
+http://www.datos.misiones.gov.ar/api,http://www.datos.misiones.gov.ar/revision/list?format=atom
 https://www.data.vic.gov.au/api,https://www.data.vic.gov.au/revision/list?format=atom
 http://data.gov.ro/api,http://data.gov.ro/revision/list?format=atom
 http://opendata.aragon.es/catalogo/api,http://opendata.aragon.es/catalogo/revision/list?format=atom
@@ -48,10 +50,10 @@ https://data.qld.gov.au/api,https://data.qld.gov.au/revision/list?format=atom
 http://opendatagortynia.gr/api,http://opendatagortynia.gr/revision/list?format=atom
 http://dati.lazio.it/catalog/it/api,http://dati.lazio.it/catalog/it/revision/list?format=atom
 https://data.overheid.nl/data/api,https://data.overheid.nl/data/revision/list?format=atom
-http://ie.ckan.net/api,http://ie.ckan.net/revision/list?format=atom
+http://ie.ckan.net/api,
 http://www.nosdonnees.fr/api,http://www.nosdonnees.fr/revision/list?format=atom
 https://edx.netl.doe.gov/api,https://edx.netl.doe.gov/revision/list?format=atom
-http://no.ckan.net/api/,http://no.ckan.net/revision/list?format=atom
+http://no.ckan.net/api/,
 http://gisdata.mn.gov/api,http://gisdata.mn.gov/revision/list?format=atom
 http://opendatareno.org/api,http://opendatareno.org/revision/list?format=atom
 http://dati.trentino.it/api,http://dati.trentino.it/revision/list?format=atom
@@ -69,7 +71,7 @@ http://www.opendata-hro.de/api,http://www.opendata-hro.de/revision/list?format=a
 http://udct-data.aigid.jp/api,http://udct-data.aigid.jp/revision/list?format=atom
 http://www.offene-daten.me/api,http://www.offene-daten.me/revision/list?format=atom
 http://data.kk.dk/api,http://data.kk.dk/revision/list?format=atom
-http://cz.ckan.net/api,http://cz.ckan.net/revision/list?format=atom
+http://cz.ckan.net/api,
 http://portal.openbelgium.be/api,http://portal.openbelgium.be/revision/list?format=atom
 http://opendata.opennorth.se/api,http://opendata.opennorth.se/revision/list?format=atom
 http://www.hri.fi/api,http://www.hri.fi/revision/list?format=atom
@@ -79,7 +81,7 @@ http://opendata.hu/api,http://opendata.hu/revision/list?format=atom
 http://data.surrey.ca/api,http://data.surrey.ca/revision/list?format=atom
 http://donnees.ville.sherbrooke.qc.ca/api,http://donnees.ville.sherbrooke.qc.ca/revision/list?format=atom
 http://dati.toscana.it/api,http://dati.toscana.it/revision/list?format=atom
-http://it.ckan.net/api,http://it.ckan.net/revision/list?format=atom
+http://it.ckan.net/api,
 http://opendata.comune.bari.it/api,http://opendata.comune.bari.it/revision/list?format=atom
 https://offenedaten.de/api,https://offenedaten.de/revision/list?format=atom
 http://hubofdata.ru/api,http://hubofdata.ru/revision/list?format=atom
@@ -95,7 +97,7 @@ http://data.opencolorado.org/api,http://data.opencolorado.org/revision/list?form
 http://opendata.aragon.es/catalogo/api/,http://opendata.aragon.es/catalogo/revision/list?format=atom
 http://annuario.comune.fi.it/api,http://annuario.comune.fi.it/revision/list?format=atom
 http://opendata.admin.ch/api,http://opendata.admin.ch/revision/list?format=atom
-https://data.noaa.gov/api,https://data.noaa.gov/revision/list?format=atom
+https://data.noaa.gov/api,
 http://oppnadata.se/api,http://oppnadata.se/revision/list?format=atom
 http://data.grcity.us/api,http://data.grcity.us/revision/list?format=atom
 http://dados.gov.br/api,http://dados.gov.br/revision/list?format=atom
@@ -105,7 +107,7 @@ http://iatiregistry.org/api,http://iatiregistry.org/revision/list?format=atom
 http://opendata.awt.be/api,http://opendata.awt.be/revision/list?format=atom
 http://www.odaa.dk/api,
 http://rotterdamopendata.nl/api,http://rotterdamopendata.nl/revision/list?format=atom
-http://br.ckan.net/api,http://br.ckan.net/revision/list?format=atom
+http://br.ckan.net/api,
 http://www.data.gv.at/katalog/api,http://www.data.gv.at/katalog/revision/list?format=atom
 http://data.salzburgerland.com/api,http://data.salzburgerland.com/revision/list?format=atom
 http://data.gov.au/api,http://data.gov.au/revision/list?format=atom
