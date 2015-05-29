@@ -1,8 +1,9 @@
-from __future__ import print_function
 import urllib2
+import httplib
 from urlparse import urlparse
 import json
 import csv
+import feedparser
 
 DATAPORTALS = 'http://dataportals.org/api/data.json'
 
@@ -39,13 +40,32 @@ def lookup_dataportals(dataportals):
                             urllib2.urlopen(api_url)
                             api = api_url
                         except:
-                            print(id+': api error')
+                            print('API error: ' + id)
                     ckan_portals[id] = {'url': url, 'api': api}
                 except urllib2.HTTPError, e:
-                    print(e.code)
+                    print('URL error: ' + url + ', ' + str(e.code))
                 except urllib2.URLError, e:
-                    print(e.args)
+                    print('URL error: ' + url + ', ' + str(e.args))
     return ckan_portals
+
+
+def lookup_revision(api_url):
+    try:
+        url = api_url.split('/api')[-2] + '/revision/list?format=atom'
+        if check_url(url):
+            return url
+    except:
+        print('Feed error: ' + url)
+        pass
+    return None
+
+
+def check_url(url):
+    p = urlparse(url)
+    conn = httplib.HTTPConnection(p.netloc)
+    conn.request('HEAD', p.path)
+    resp = conn.getresponse()
+    return resp.status < 400
 
 
 def read_csv(file_obj):
@@ -64,12 +84,55 @@ def read_csv(file_obj):
         ckan_portals[id] = {'url': url, 'api': api}
     return ckan_portals
 
-if __name__ == '__main__':
-    with open('instances.csv') as f:
-        csvlist = read_csv(f)
 
-    p = lookup_dataportals(DATAPORTALS)
+def write_csv(f, joined):
+    tuples = []
+    for key in joined:
+        tuples.append([joined[key]['url'], joined[key]['api']])
+    sorted_tuples = sorted(tuples, key=lambda tup: tup[0])
+    csvw = csv.writer(f)
+    csvw.writerows(sorted_tuples)
 
-    for key in p:
+
+def join_list(csvlist, dataportal):
+    # at first collect all ids from dataportal.org not in the csv list
+    new_portals = {}
+    for key in dataportal:
         if key not in csvlist:
-            print(key + ' ' + str(p[key]['api']))
+            print('Not in CSV list: ' + key + ' ' + str(p[key]['api']))
+            new_portals[key] = p[key]
+    # TODO look for APIs in dataportal which are not in the csv list
+    joined = csvlist.copy()
+    joined.update(new_portals)
+    return joined
+
+
+if __name__ == '__main__':
+    filename = 'instances'
+
+    # read file
+    with open(filename+'.csv', 'r') as f:
+        csvlist = read_csv(f)
+    print(str(len(csvlist)) + ' items in CSV list')
+
+    # get dataportals URLs
+    p = lookup_dataportals(DATAPORTALS)
+    print(str(len(p)) + ' CKAN instances in dataportals.org')
+
+    joined = join_list(csvlist, p)
+    print(str(len(joined)) + ' items in joined list')
+
+    # rewrite file
+    with open(filename+'.csv', 'wb') as f:
+        write_csv(f, joined)
+
+    # rewrite file
+    with open(filename+'.json', 'wb') as f:
+        json.dump(joined, f)
+
+    # look for revision atom feed
+    revision_feed = [[csvlist[key]['api'], lookup_revision(csvlist[key]['api'])] for key in csvlist if csvlist[key]['api']]
+    with open('revision_feed.csv', 'wb') as h:
+        csvw = csv.writer(h)
+        csvw.writerow(['url', 'revision_feed'])
+        csvw.writerows(revision_feed)

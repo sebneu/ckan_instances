@@ -1,0 +1,11 @@
+132 items in CSV list
+URL error: http://ckan.emap.fgv.br, (gaierror(-2, 'Name or service not known'),)
+URL error: http://data.civicinfo.ca/, (error(110, 'Connection timed out'),)
+URL error: http://www.manchester.gov.uk/info/500215/open_data, 404
+URL error: http://datagov.ru/, (error(110, 'Connection timed out'),)
+URL error: http://thedatahub.kr/, (gaierror(-2, 'Name or service not known'),)
+URL error: http://catalog.opendata.in.th/, (error(110, 'Connection timed out'),)
+URL error: http://data.klp.org.in/, (gaierror(-2, 'Name or service not known'),)
+URL error: http://dados.novohamburgo.rs.gov.br, (error(110, 'Connection timed out'),)
+56 CKAN instances in dataportals.org
+132 items in joined list
