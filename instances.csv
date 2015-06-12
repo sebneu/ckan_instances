@@ -26,7 +26,7 @@ http://data.gov.ie/,http://data.gov.ie/api
 http://data.gov.ro/,http://data.gov.ro/api
 http://data.gov.sk,http://data.gov.sk/api
 http://data.gov.uk,http://data.gov.uk/api
-http://data.gov/,
+http://data.gov/,http://catalog.data.gov/api
 http://data.graz.gv.at/,http://ckan.data.graz.gv.at/api
 http://data.grcity.us,http://data.grcity.us/api
 http://data.gv.at,http://www.data.gv.at/katalog/api
@@ -83,7 +83,6 @@ http://it.ckan.net,http://it.ckan.net/api
 http://linkeddatacatalog.dws.informatik.uni-mannheim.de/,http://linkeddatacatalog.dws.informatik.uni-mannheim.de/api
 http://offenedaten.de/,https://offenedaten.de/api
 http://open-data.europa.eu/,http://open-data.europa.eu/en/data/api
-http://open.canada.ca/,http://open.canada.ca/data/en/api
 http://opencolorado.org/,http://data.opencolorado.org/api
 http://opendata.admin.ch/,http://opendata.admin.ch/api
 http://opendata.aragon.es/,http://opendata.aragon.es/catalogo/api
@@ -133,3 +132,4 @@ https://opendata.bayern.de/,https://opendata.bayern.de/api
 https://www.data.vic.gov.au/,https://www.data.vic.gov.au/api
 https://www.opendataportal.at/,http://data.opendataportal.at/api
 http://data.nhm.ac.uk/,http://data.nhm.ac.uk/api
+http://open-data.okfn.gr/,http://ckan.okfn.gr/api
