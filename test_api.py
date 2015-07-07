@@ -1,4 +1,3 @@
-import csv
 import json
 import urllib2
 from ckan_instances import read_csv
@@ -13,6 +12,7 @@ if __name__ == '__main__':
         csvlist = read_csv(f)
 
     for id in csvlist:
+        print csvlist[id]['url']
         if csvlist[id]['api']:
             try:
                 ds_list_url = csvlist[id]['api'] + '/rest/dataset'
@@ -25,11 +25,22 @@ if __name__ == '__main__':
                 print e
 
             try:
-                full_list_url = csvlist[id]['api'] + '/action/package_search'
+                # at first find out how many ds there are
+                full_list_url = csvlist[id]['api'] + '/action/package_search?rows=0'
                 response = urllib2.urlopen(full_list_url)
                 data = json.load(response)
                 if data['success'] and 'result' in data:
-                    csvlist[id]['full_list'] = len(data['result'])
+                    total = data['result']['count']
+
+                    full_list_total = csvlist[id]['api'] + '/action/package_search?rows='+str(total)
+                    response = urllib2.urlopen(full_list_total)
+                    data = json.load(response)
+                    if data['success'] and 'result' in data:
+                        csvlist[id]['full_list'] = len(data['result']['results'])
+                    else:
+                        print data['error']
+                else:
+                    print data['error']
             except Exception, e:
                 print id, 'No full list accessible'
                 print e
