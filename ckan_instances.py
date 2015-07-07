@@ -1,9 +1,10 @@
+import argparse
 import urllib2
 import httplib
 from urlparse import urlparse
 import json
 import csv
-import feedparser
+import sys
 
 DATAPORTALS = 'http://dataportals.org/api/data.json'
 
@@ -57,7 +58,7 @@ def lookup_revision(api_url):
     except:
         print('Feed error: ' + url)
         pass
-    return None
+    return ''
 
 
 def check_url(url):
@@ -109,30 +110,41 @@ def join_list(csvlist, dataportal):
 
 if __name__ == '__main__':
     filename = 'instances'
+    parser = argparse.ArgumentParser(description='Description of your program')
+    parser.add_argument('--revision', help='run revision list check', action='store_true')
+    parser.add_argument('--dataportals', help='run dataportals check', action='store_true')
+    args = parser.parse_args()
 
     # read file
     with open(filename+'.csv', 'r') as f:
         csvlist = read_csv(f)
     print(str(len(csvlist)) + ' items in CSV list')
 
-    # get dataportals URLs
-    p = lookup_dataportals(DATAPORTALS)
-    print(str(len(p)) + ' CKAN instances in dataportals.org')
+    if args.dataportals:
+        # get dataportals URLs
+        p = lookup_dataportals(DATAPORTALS)
+        print(str(len(p)) + ' CKAN instances in dataportals.org')
 
-    joined = join_list(csvlist, p)
-    print(str(len(joined)) + ' items in joined list')
+        csvlist = join_list(csvlist, p)
+        print(str(len(csvlist)) + ' items in joined list')
 
-    # rewrite file
-    with open(filename+'.csv', 'wb') as f:
-        write_csv(f, joined)
+        # rewrite file
+        with open(filename+'.csv', 'wb') as f:
+            write_csv(f, csvlist)
 
-    # rewrite file
+    if args.revision:
+        # look for revision atom feed
+        revision_feed = []
+        for key in csvlist:
+            if csvlist[key]['api']:
+                rev = lookup_revision(csvlist[key]['api'])
+                revision_feed.append([csvlist[key]['api'], rev])
+                csvlist[key]['revision'] = rev
+        with open('revision_feed.csv', 'wb') as h:
+            csvw = csv.writer(h)
+            csvw.writerow(['url', 'revision_feed'])
+            csvw.writerows(revision_feed)
+
+    # rewrite json file
     with open(filename+'.json', 'wb') as f:
-        json.dump(joined, f)
-
-    # look for revision atom feed
-    revision_feed = [[csvlist[key]['api'], lookup_revision(csvlist[key]['api'])] for key in csvlist if csvlist[key]['api']]
-    with open('revision_feed.csv', 'wb') as h:
-        csvw = csv.writer(h)
-        csvw.writerow(['url', 'revision_feed'])
-        csvw.writerows(revision_feed)
+        json.dump(csvlist, f)
